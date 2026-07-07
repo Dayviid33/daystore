@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DayStore</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">
+                <a href="index.html">DayStore</a>
+            </h1>
+
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Deals</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Reviews</a></li>    
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Find the Best Products at the Best Prices</h2>
+            <p>Compare products, discover deals, and shop smarter.</p>
+
+            <input 
+                type="text"
+                id="search-input"
+                class="search-bar"
+                placeholder="Search for a product..."
+            >
+
+            <button id="search-btn" class="search-btn">Search</button>
+        </section>
+
+    <div class="categories">
+
+        <button class="category-btn" data-category="All">All</button>
+
+        <button class="category-btn" data-category="Gaming">Gaming</button>
+
+        <button class="category-btn" data-category="Phones">Phones</button>
+
+    </div>
+
+        <section class="products">
+            <h2>Trending Products</h2>
+                <p class="section-subtitle">
+                The hottest products people are checking out right now.
+                </p>    
+            <div class="product-grid" id="product-grid">
+
+            </div>
+        </section>
+    </main>
+<script src="products.js"></script>
+<script src="script.js"></script>
+</body>
+
+</html>
