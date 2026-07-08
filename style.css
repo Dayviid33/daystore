@@ -112,6 +112,7 @@ body {
     box-shadow: 0 8px 20px rgba(0,0,0,.08);
     transition: .3s;
     overflow: hidden;
+    position: relative;
 }
 
 .product-card:hover {
@@ -220,4 +221,57 @@ body {
 
 .product-info p{
     margin-bottom:15px;
+}
+
+.badge {
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:#ff6b35;
+    color:white;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.rating {
+    color: #f59e0b;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.brand {
+    color: #6b7280;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.favorite-btn{
+    float:right;
+    border:none;
+    background:none;
+    font-size:24px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.favorite-btn:hover{
+    transform:scale(1.2);
+}
+
+.sort-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 8%;
+}
+
+#sort-select {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    cursor: pointer;
 }
