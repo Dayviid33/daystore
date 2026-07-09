@@ -33,20 +33,30 @@
 
     <main>
         <section class="hero">
-            <h2>Find the Best Products at the Best Prices</h2>
-            <p>Compare products, discover deals, and shop smarter.</p>
+    <h1>Find Your Next Favorite Tech.</h1>
 
-            <input 
-                type="text"
-                id="search-input"
-                class="search-bar"
-                placeholder="Search for a product..."
-            >
+    <p>
+        Discover premium tech products, curated for performance,
+        style, and value.
+    </p>
 
-            <button id="search-btn" class="search-btn">Search</button>
-        </section>
+    <div class="search-container">
+        <input
+            type="text"
+            id="search-input"
+            class="search-bar"
+            placeholder="Search products..."
+        >
+
+        <button id="search-btn">
+            Search
+        </button>
+    </div>
+</section>
 
     <div class="categories">
+
+        <div class="container">
 
         <button class="category-btn" data-category="All">All</button>
 
@@ -54,18 +64,20 @@
 
         <button class="category-btn" data-category="Phones">Phones</button>
 
-    </div>
+         </div>
 
-    <div class="sort-container">
-        <label for="sort-select">Sort by:</label>
-
-        <select id="sort-select">
+     <select id="sort-select">
             <option value="default">Featured</option>
             <option value="rating">Highest Rated</option>
             <option value="low">Price: Low to High</option>
             <option value="high">Price: High to Low</option>
             <option value="name">Name (A-Z)</option>
         </select>
+    </div>
+
+   
+
+       
     </div>
 
         <section class="products">
