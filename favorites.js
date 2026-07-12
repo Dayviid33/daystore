@@ -8,12 +8,28 @@ const favoriteProducts = products.filter(product =>
     favorites.includes(product.id)
 );
 
+const title = document.querySelector(".products h2");
+
+title.textContent = `Your Favorites (${favoriteProducts.length})`;
+
 // If there are no favorites
 if (favoriteProducts.length === 0) {
 
-    favoritesGrid.innerHTML = `
-        <h2>No favorite products yet ❤️</h2>
-    `;
+   favoritesGrid.innerHTML = `
+<div class="empty-state">
+
+    <h2>No favorites yet</h2>
+
+    <p>
+        Save products you love and they'll appear here.
+    </p>
+
+    <a href="index.html" class="view-btn">
+        Browse Products
+    </a>
+
+</div>
+`;
 
 } else {
 
@@ -32,7 +48,9 @@ if (favoriteProducts.length === 0) {
                 </a>
             </div>
 
-            <img src="${product.image}" alt="${product.name}">
+             <div class="product-image">
+                 <img src="${product.image}" alt="${product.name}">
+            </div>
 
             <p class="rating">⭐ ${product.rating}</p>
 
@@ -41,10 +59,6 @@ if (favoriteProducts.length === 0) {
             <p class="brand">by ${product.brand}</p>
 
             <p class="price">${product.price}</p>
-
-            <a href="product.html?id=${product.id}" class="view-btn">
-                View Deal
-            </a>
 
             </div>
             `;  

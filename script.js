@@ -17,7 +17,9 @@ function displayProducts(productList) {
 
                 <span class="badge">Trending</span>
 
-                <img src="${product.image}" alt="${product.name}">
+                <div class="product-image">
+                    <img src="${product.image}" alt="${product.name}">
+                </div>
 
                 <p class="rating">⭐ ${product.rating}</p>
 
