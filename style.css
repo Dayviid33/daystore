@@ -6,7 +6,7 @@
 
 body{
     margin:0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family:'Inter',sans-serif;
 
     background:
         radial-gradient(circle at top, #f5f9ff 0%, #ffffff 45%);
@@ -82,23 +82,28 @@ body{
 }
 
 .hero{
-    padding:120px 20px 90px;
+    background:linear-gradient(135deg,#0071e3,#4f46e5);
+    color:white;
+    text-align:center;
+    padding:90px 20px;
+    border-radius:28px;
+    margin:40px auto;
+    max-width:1300px;
+    overflow:hidden;
+    position:relative;
 }
 
 .hero h1{
-    font-size:64px;
-    font-weight:800;
-    letter-spacing:-2px;
-    line-height:1.1;
+    font-size:58px;
     margin-bottom:20px;
+    font-weight:800;
 }
 
 .hero p{
-    font-size:22px;
-    color:#6b7280;
+    font-size:20px;
     max-width:700px;
-    margin:0 auto 45px;
-    line-height:1.6;
+    margin:0 auto 40px;
+    opacity:.9;
 }
 
 .search-container{
@@ -161,25 +166,16 @@ body{
 }
 
 .product-card{
-    background:white;
     border-radius:24px;
-    padding:24px;
-    box-shadow:0 10px 30px rgba(0,0,0,.06);
-    position:relative;
     overflow:hidden;
-
-    transition:
-        transform .3s ease,
-        box-shadow .3s ease;
-
-    opacity:0;
-    transform:translateY(20px);
-    animation:cardFade .5s ease forwards;       
+    transition:.35s;
+    background:white;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
 }
 
 .product-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 20px 45px rgba(0,0,0,.12);
+    transform:translateY(-10px);
+    box-shadow:0 25px 50px rgba(0,0,0,.15);
 }
 
 .product-card img{
@@ -252,22 +248,23 @@ body{
 }
 
 .view-btn{
-    display:block;
-    text-align:center;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
     background:#0071e3;
     color:white;
     text-decoration:none;
-    padding:15px;
-    border-radius:14px;
-    font-weight:600;
-
-    transition:background .25s ease, transform .25s ease;
+    padding:15px 28px;
+    border-radius:999px;
+    font-weight:700;
+    transition:.3s;
 }
 
 .view-btn:hover{
-    transform:translateY(-2px);
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(0,113,227,.35);
 }
-
 .product-page{
     max-width:1200px;
     margin:60px auto;
@@ -407,8 +404,7 @@ body.dark-mode .navbar{
 }
 
 body.dark-mode .product-card{
-    background:#222;
-    color:white;
+    background:#1f2937;
 }
 
 body.dark-mode .theme-btn{
@@ -728,4 +724,70 @@ body.dark-mode .specs{
 
 body.dark-mode .specs p{
     border-bottom:1px solid #374151;
+}
+
+.product-badge{
+    display:inline-block;
+    padding:8px 14px;
+    margin-bottom:15px;
+    background:#0071e3;
+    color:white;
+    border-radius:999px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.price-box{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:6px;
+}
+
+.old-price{
+    text-decoration:line-through;
+    color:#888;
+    font-size:15px;
+}
+
+.discount{
+    background:#16a34a;
+    color:white;
+    padding:6px 12px;
+    border-radius:999px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.discount-badge{
+    background:#22c55e;
+    color:white;
+    padding:5px 10px;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    background:rgba(255,255,255,.15);
+    border-radius:50%;
+    top:-120px;
+    right:-100px;
+    filter:blur(40px);
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:250px;
+    height:250px;
+    background:rgba(255,255,255,.1);
+    border-radius:50%;
+    bottom:-120px;
+    left:-80px;
+    filter:blur(30px);
 }

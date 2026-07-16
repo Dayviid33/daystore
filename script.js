@@ -27,7 +27,25 @@ function displayProducts(productList) {
 
                 <p class="brand">by ${product.brand}</p>
 
-                <p class="price">${product.price}</p>
+               <div class="price-box">
+
+    ${product.oldPrice
+        ? `<span class="old-price">${product.oldPrice}</span>`
+        : ""}
+
+    <p class="price">${product.price}</p>
+
+    ${product.oldPrice
+        ? `<span class="discount-badge">
+            Save ${Math.round(
+                ((parseFloat(product.oldPrice.replace("$","")) -
+                parseFloat(product.price.replace("$",""))) /
+                parseFloat(product.oldPrice.replace("$",""))) * 100
+            )}%
+        </span>`
+        : ""}
+
+</div>
 
                 <a href="product.html?id=${product.id}" class="view-btn">
                 View Deal
