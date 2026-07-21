@@ -2,6 +2,8 @@ const productGrid = document.getElementById("product-grid");
 
 let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
+let compare = JSON.parse(localStorage.getItem("compare")) || [];
+
 function displayProducts(productList) {
 
     productGrid.innerHTML = "";
@@ -18,7 +20,7 @@ function displayProducts(productList) {
                 <span class="badge">Trending</span>
 
                 <div class="product-image">
-                    <img src="${product.image}" alt="${product.name}">
+                    <img src="${product.image}" alt="${product.name}" onerror="this.onerror=null;this.src='images/placeholder.svg';">
                 </div>
 
                 <p class="rating">⭐ ${product.rating}</p>
@@ -48,7 +50,7 @@ function displayProducts(productList) {
 </div>
 
                 <a href="product.html?id=${product.id}" class="view-btn">
-                View Deal
+                View Details
                 </a>
 
             </div>
@@ -175,4 +177,3 @@ sortSelect.addEventListener("change", function () {
     displayProducts(sortedProducts);
 
 });
-

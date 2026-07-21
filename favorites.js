@@ -49,7 +49,7 @@ if (favoriteProducts.length === 0) {
             </div>
 
              <div class="product-image">
-                 <img src="${product.image}" alt="${product.name}">
+                 <img src="${product.image}" alt="${product.name}" onerror="this.onerror=null;this.src='images/placeholder.svg';">
             </div>
 
             <p class="rating">⭐ ${product.rating}</p>
