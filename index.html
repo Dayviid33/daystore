@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <title>DayStore</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +27,7 @@
 
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="">Products</a></li>
+                <li><a href="#products-section">Products</a></li>
                 <li><a href="favorites.html">Favorites</a></li>    
             </ul>
 
@@ -70,6 +74,10 @@
 
         <button class="category-btn" data-category="Phones">Phones</button>
 
+        <button class="category-btn" data-category="Laptops">Laptops</button>
+
+        <button class="category-btn" data-category="Audio">Audio</button>
+
          </div>
 
      <select id="sort-select">
@@ -81,37 +89,16 @@
         </select>
     </div>
 
-    <section class="featured">
-
-    <div class="featured-text">
-
-        <span class="featured-label">Featured Product</span>
-
-        <h2>iPhone 17</h2>
-
-        <p>
-            Powerful. Beautiful. Built for the future.
-            Discover Apple's newest flagship.
-        </p>
-
-        <a href="product.html?id=4" class="featured-btn">
-            Shop Now →
-        </a>
-
-    </div>
-
-    <div class="featured-image">
-        <img src="images/iphoe17.jpeg" alt="iPhone 17">
-    </div>
-
-</section>
+    <section class="featured" id="featured-section">
+        <!-- Populated dynamically by script.js from the product marked featured: true -->
+    </section>
 
    
 
        
     </div>
 
-        <section class="products">
+        <section class="products" id="products-section">
             <h2>Trending Products</h2>
 
             <div class="product-grid" id="product-grid">
@@ -134,8 +121,8 @@
         <div class="footer-links">
             <h3>Explore</h3>
 
-            <a href="#">Home</a>
-            <a href="#">Products</a>
+            <a href="index.html">Home</a>
+            <a href="#products-section">Products</a>
             <a href="favorites.html">Favorites</a>
         </div>
 
@@ -145,6 +132,7 @@
             <a href="#">About</a>
             <a href="#">Contact</a>
             <a href="disclosure.html">Affiliate Disclosure</a>
+            <a href="privacy.html">Privacy Policy</a>
         </div>
 
     </div>

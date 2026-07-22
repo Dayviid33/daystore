@@ -35,33 +35,47 @@ if (favoriteProducts.length === 0) {
 
     favoriteProducts.forEach(product => {
 
+        const oldPrice = product.oldPrice
+            ? `<span class="old-price">${formatPrice(product.oldPrice, product.currency)}</span>`
+            : "";
+
+        const discountBadge = product.oldPrice
+            ? `<span class="discount-badge">
+                Save ${Math.round(
+                    ((product.oldPrice - product.price) / product.oldPrice) * 100
+                )}%
+            </span>`
+            : "";
+
         favoritesGrid.innerHTML += `
             <div class="product-card">
 
-            <div class="card-actions">
-                <button class="remove-btn" data-id="${product.id}">
-                    Remove ❤️
+                <button class="favorite-btn remove-btn" data-id="${product.id}" title="Remove from favorites">
+                    ❤️
                 </button>
+
+                <div class="product-image">
+                    <img src="${product.image}" alt="${product.name}" onerror="this.onerror=null;this.src='images/placeholder.svg';">
+                </div>
+
+                <p class="rating">⭐ ${product.rating}</p>
+
+                <h3>${product.name}</h3>
+
+                <p class="brand">by ${product.brand}</p>
+
+                <div class="price-box">
+                    ${oldPrice}
+                    <span class="price">${formatPrice(product.price, product.currency)}</span>
+                    ${discountBadge}
+                </div>
 
                 <a href="product.html?id=${product.id}" class="view-btn">
                     View Deal
                 </a>
-            </div>
-
-             <div class="product-image">
-                 <img src="${product.image}" alt="${product.name}" onerror="this.onerror=null;this.src='images/placeholder.svg';">
-            </div>
-
-            <p class="rating">⭐ ${product.rating}</p>
-
-            <h3>${product.name}</h3>
-
-            <p class="brand">by ${product.brand}</p>
-
-            <p class="price">${product.price}</p>
 
             </div>
-            `;  
+            `;
 
     });
 

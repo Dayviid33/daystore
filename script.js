@@ -4,6 +4,43 @@ let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
 let compare = JSON.parse(localStorage.getItem("compare")) || [];
 
+// Render the featured product section from whichever product has featured: true
+const featuredSection = document.getElementById("featured-section");
+
+if (featuredSection) {
+
+    const featuredProduct = products.find(product => product.featured);
+
+    if (featuredProduct) {
+
+        featuredSection.innerHTML = `
+            <div class="featured-text">
+
+                <span class="featured-label">Featured Product</span>
+
+                <h2>${featuredProduct.name}</h2>
+
+                <p>
+                    ${featuredProduct.tagline || featuredProduct.description}
+                </p>
+
+                <a href="product.html?id=${featuredProduct.id}" class="featured-btn">
+                    Shop Now →
+                </a>
+
+            </div>
+
+            <div class="featured-image">
+                <img src="${featuredProduct.image}" alt="${featuredProduct.name}" onerror="this.onerror=null;this.src='images/placeholder.svg';">
+            </div>
+        `;
+
+    } else {
+        featuredSection.style.display = "none";
+    }
+
+}
+
 function displayProducts(productList) {
 
     productGrid.innerHTML = "";
@@ -32,17 +69,15 @@ function displayProducts(productList) {
                <div class="price-box">
 
     ${product.oldPrice
-        ? `<span class="old-price">${product.oldPrice}</span>`
+        ? `<span class="old-price">${formatPrice(product.oldPrice, product.currency)}</span>`
         : ""}
 
-    <p class="price">${product.price}</p>
+    <p class="price">${formatPrice(product.price, product.currency)}</p>
 
     ${product.oldPrice
         ? `<span class="discount-badge">
             Save ${Math.round(
-                ((parseFloat(product.oldPrice.replace("$","")) -
-                parseFloat(product.price.replace("$",""))) /
-                parseFloat(product.oldPrice.replace("$",""))) * 100
+                ((product.oldPrice - product.price) / product.oldPrice) * 100
             )}%
         </span>`
         : ""}
@@ -151,17 +186,11 @@ sortSelect.addEventListener("change", function () {
             break;
 
         case "low":
-            sortedProducts.sort((a, b) =>
-                parseFloat(a.price.replace("$", "")) -
-                parseFloat(b.price.replace("$", ""))
-            );
+            sortedProducts.sort((a, b) => a.price - b.price);
             break;
 
         case "high":
-            sortedProducts.sort((a, b) =>
-                parseFloat(b.price.replace("$", "")) -
-                parseFloat(a.price.replace("$", ""))
-            );
+            sortedProducts.sort((a, b) => b.price - a.price);
             break;
 
         case "name":

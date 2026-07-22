@@ -24,11 +24,9 @@ const consHTML = (product.cons || [])
     .map(con => `<li>❌ ${con}</li>`)
     .join("");
 
-const newPrice = parseFloat(product.price.replace("$", ""));
+const newPrice = product.price;
 
-const oldPrice = product.oldPrice
-    ? parseFloat(product.oldPrice.replace("$", ""))
-    : null;
+const oldPrice = product.oldPrice || null;
 
 const discount = oldPrice
     ? Math.round(((oldPrice - newPrice) / oldPrice) * 100)
@@ -66,9 +64,9 @@ productContainer.innerHTML = `
 
             <div class="price-box">
                 ${product.oldPrice
-                    ? `<span class="old-price">${product.oldPrice}</span>`
+                    ? `<span class="old-price">${formatPrice(product.oldPrice, product.currency)}</span>`
                     : ""}
-                <span class="price">${product.price}</span>
+                <span class="price">${formatPrice(product.price, product.currency)}</span>
                 ${discount ? `<span class="discount-badge">Save ${discount}%</span>` : ""}
             </div>
 
