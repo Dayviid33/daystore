@@ -5,6 +5,24 @@ const product = products.find(product => product.id === id);
 
 const productContainer = document.getElementById("product-container");
 
+// Set a unique title + meta description per product so each page is
+// distinguishable in search results and browser tabs/history, instead
+// of every product page showing the same generic "Product" title.
+if (product) {
+
+    document.title = `${product.name} - DayStore`;
+
+    const metaDescription = document.querySelector('meta[name="description"]');
+
+    if (metaDescription) {
+        metaDescription.setAttribute(
+            "content",
+            `${product.name} by ${product.brand} - ${product.description}`
+        );
+    }
+
+}
+
 // Was missing before — this caused a ReferenceError and broke the whole page
 let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
