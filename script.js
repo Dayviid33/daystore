@@ -16,7 +16,7 @@ if (featuredSection) {
         featuredSection.innerHTML = `
             <div class="featured-text">
 
-                <span class="featured-label">Featured Product</span>
+                <span class="featured-label">Produs Recomandat</span>
 
                 <h2>${featuredProduct.name}</h2>
 
@@ -25,7 +25,7 @@ if (featuredSection) {
                 </p>
 
                 <a href="product.html?id=${featuredProduct.id}" class="featured-btn">
-                    Shop Now →
+                    Cumpără acum →
                 </a>
 
             </div>
@@ -48,23 +48,21 @@ function displayProducts(productList) {
     productList.forEach(product => {
 
         productGrid.innerHTML += `
-           <div class="product-card">
+           <div class="product-card" data-id="${product.id}">
 
              <button class="favorite-btn" data-id="${product.id}">
-            ${favorites.includes(product.id) ? "❤️" : "🤍"}
+            ${favorites.includes(product.id) ? ICONS.heartFilled : ICONS.heartOutline}
             </button>
-
-                <span class="badge">Trending</span>
 
                 <div class="product-image">
                     <img src="${product.image}" alt="${product.name}" onerror="this.onerror=null;this.src='images/placeholder.svg';">
                 </div>
 
-                <p class="rating">⭐ ${product.rating}</p>
+                <p class="rating">${ICONS.star} ${product.rating}</p>
 
                 <h3>${product.name}</h3>
 
-                <p class="brand">by ${product.brand}</p>
+                <p class="brand">de ${product.brand}</p>
 
                <div class="price-box">
 
@@ -76,7 +74,7 @@ function displayProducts(productList) {
 
     ${product.oldPrice
         ? `<span class="discount-badge">
-            Save ${Math.round(
+            Economisești ${Math.round(
                 ((product.oldPrice - product.price) / product.oldPrice) * 100
             )}%
         </span>`
@@ -85,7 +83,7 @@ function displayProducts(productList) {
 </div>
 
                 <a href="product.html?id=${product.id}" class="view-btn">
-                View Details
+                Vezi detalii
                 </a>
 
             </div>
@@ -95,19 +93,22 @@ function displayProducts(productList) {
 
     document.querySelectorAll(".favorite-btn").forEach(button => {
 
-   button.addEventListener("click", function () {
+   button.addEventListener("click", function (event) {
+
+    // Stop this click from also triggering the card's own click-to-navigate handler below
+    event.stopPropagation();
 
     const id = Number(button.dataset.id);
 
     if (favorites.includes(id)) {
 
         favorites = favorites.filter(fav => fav !== id);
-        button.textContent = "🤍";
+        button.innerHTML = ICONS.heartOutline;
 
     } else {
 
         favorites.push(id);
-        button.textContent = "❤️";
+        button.innerHTML = ICONS.heartFilled;
 
     }
 
@@ -116,6 +117,19 @@ function displayProducts(productList) {
 });
 
 });
+
+    // Make the whole card clickable (not just the "Vezi detalii" button),
+    // since the heart button above already stops its own click from bubbling here.
+    document.querySelectorAll(".product-card").forEach(card => {
+
+        card.addEventListener("click", function () {
+
+            const id = card.dataset.id;
+            window.location.href = `product.html?id=${id}`;
+
+        });
+
+    });
 
 }
 

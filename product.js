@@ -17,7 +17,7 @@ if (product) {
     if (metaDescription) {
         metaDescription.setAttribute(
             "content",
-            `${product.name} by ${product.brand} - ${product.description}`
+            `${product.name} de ${product.brand} - ${product.description}`
         );
     }
 
@@ -32,14 +32,14 @@ const specsHTML = product.specs
             <p><strong>${key}:</strong> ${value}</p>
         `)
         .join("")
-    : "<p>No specifications available.</p>";
+    : "<p>Nu sunt disponibile specificații.</p>";
 
 const prosHTML = (product.pros || [])
-    .map(pro => `<li>✅ ${pro}</li>`)
+    .map(pro => `<li>${pro}</li>`)
     .join("");
 
 const consHTML = (product.cons || [])
-    .map(con => `<li>❌ ${con}</li>`)
+    .map(con => `<li>${con}</li>`)
     .join("");
 
 const newPrice = product.price;
@@ -57,7 +57,7 @@ productContainer.innerHTML = `
 
             ${product.oldPrice ? `
                 <span class="sale-ribbon">
-                    SALE
+                    REDUCERE
                 </span>
             ` : ""}
         </div>
@@ -65,7 +65,7 @@ productContainer.innerHTML = `
         <div class="product-info">
 
             <button class="favorite-btn" data-id="${product.id}">
-                ${favorites.includes(product.id) ? "❤️" : "🤍"}
+                ${favorites.includes(product.id) ? ICONS.heartFilled : ICONS.heartOutline}
             </button>
 
             <span class="product-badge">
@@ -74,10 +74,10 @@ productContainer.innerHTML = `
 
             <h1>${product.name}</h1>
 
-            <p><strong>Brand:</strong> ${product.brand}</p>
+            <p><strong>Marcă:</strong> ${product.brand}</p>
 
             <p class="rating">
-                ⭐⭐⭐⭐⭐ ${product.rating} <span style="color:#6b7280; font-weight:400;">(${product.reviews || 0} reviews)</span>
+                ${ICONS.star.repeat(5)} ${product.rating} <span style="color:#6b7280; font-weight:400;">(${product.reviews || 0} recenzii)</span>
             </p>
 
             <div class="price-box">
@@ -85,32 +85,40 @@ productContainer.innerHTML = `
                     ? `<span class="old-price">${formatPrice(product.oldPrice, product.currency)}</span>`
                     : ""}
                 <span class="price">${formatPrice(product.price, product.currency)}</span>
-                ${discount ? `<span class="discount-badge">Save ${discount}%</span>` : ""}
+                ${discount ? `<span class="discount-badge">Economisești ${discount}%</span>` : ""}
             </div>
 
             <a href="${product.affiliateLink}"
                class="featured-btn"
                target="_blank"
                rel="sponsored noopener">
-                Buy Now →
+                Cumpără acum →
             </a>
 
             <p>${product.description}</p>
 
-            <h3>Specifications</h3>
+            <h3>Specificații</h3>
             <div class="specs">
                 ${specsHTML}
             </div>
 
-            <h3>✅ Pros</h3>
-            <ul class="pros-list">
-                ${prosHTML}
-            </ul>
+            <div class="pros-cons-grid">
 
-            <h3>❌ Cons</h3>
-            <ul class="cons-list">
-                ${consHTML}
-            </ul>
+                <div class="pros-box">
+                    <h3>${ICONS.check} Avantaje</h3>
+                    <ul class="pros-list">
+                        ${prosHTML}
+                    </ul>
+                </div>
+
+                <div class="cons-box">
+                    <h3>${ICONS.cross} Dezavantaje</h3>
+                    <ul class="cons-list">
+                        ${consHTML}
+                    </ul>
+                </div>
+
+            </div>
 
         </div>
     </div>
@@ -125,10 +133,10 @@ favoriteBtn.addEventListener("click", function () {
 
     if (favorites.includes(productId)) {
         favorites = favorites.filter(fav => fav !== productId);
-        favoriteBtn.textContent = "🤍";
+        favoriteBtn.innerHTML = ICONS.heartOutline;
     } else {
         favorites.push(productId);
-        favoriteBtn.textContent = "❤️";
+        favoriteBtn.innerHTML = ICONS.heartFilled;
     }
 
     localStorage.setItem("favorites", JSON.stringify(favorites));

@@ -23,26 +23,26 @@ const products = [
     price: 609.99,
     rating: "4.8",
     category: "Gaming",
-    description: "Premium gaming mouse made with precsion by Logitech",
+    description: "Mouse gaming premium, realizat cu precizie de Logitech",
     affiliateLink: "#",
     image: "images/mouselogitech.jpg",
-    badge: "Best Seller",
+    badge: "Cel mai vândut",
     reviews: 1243,
     specs:{
-        Weight:"60g",
-        Battery:"95 Hours",
-        Sensor:"HERO 2",
+        Greutate:"60g",
+        Baterie:"95 ore",
+        Senzor:"HERO 2",
         DPI:"32000"
     },
     pros: [
-        "Ultra-lightweight (60g)",
-        "Excellent HERO 2 sensor",
-        "95-hour battery life"
+        "Ultra-ușor (60g)",
+        "Senzor HERO 2 excelent",
+        "Autonomie baterie de 95 de ore"
     ],
 
     cons: [
-        "Premium price",
-        "No Bluetooth connectivity"
+        "Preț premium",
+        "Fără conectivitate Bluetooth"
     ]
 },
     {
@@ -53,28 +53,28 @@ const products = [
     price: 849.99,
     rating: 4.9,
     category: "Gaming",
-    description: "Premium mechanical gaming keyboard with adjustable switches.",
+    description: "Tastatură mecanică gaming premium, cu switch-uri reglabile.",
     affiliateLink: "#",
     image: "images/keyboardapex.png",
-    badge: "Editor's Choice",
+    badge: "Alegerea Editorilor",
     reviews: 587,
     specs: {
-    Switches: "OmniPoint 3.0",
-    Layout: "TKL",
-    RGB: "Per-key RGB",
-    Connection: "USB-C",
-    Polling: "8000 Hz"
+    Switchuri: "OmniPoint 3.0",
+    Format: "TKL",
+    RGB: "RGB per tastă",
+    Conexiune: "USB-C",
+    RataDeInterogare: "8000 Hz"
     },
     pros: [
-    "Adjustable OmniPoint 3.0 switches",
-    "Extremely fast 8000Hz polling rate",
-    "Premium aluminum build"
+    "Switch-uri OmniPoint 3.0 reglabile",
+    "Rată de interogare extrem de rapidă, 8000Hz",
+    "Construcție premium din aluminiu"
 ],
 
 cons: [
-    "Expensive",
-    "No wireless option",
-    "TKL layout has no numpad"
+    "Scumpă",
+    "Fără opțiune wireless",
+    "Formatul TKL nu are numpad"
 ],
     },
     {
@@ -85,28 +85,28 @@ cons: [
     price: 1249.99,
     rating: 4.9,
     category: "Gaming",
-    description: "Premium wireless gaming headset with active noise cancellation and high-fidelity audio.",
+    description: "Căști gaming wireless premium, cu anulare activă a zgomotului și sunet de înaltă fidelitate.",
     affiliateLink: "#",
     image: "images/headphonessteel.avif",
-    badge: "Best Value",
+    badge: "Cel mai bun raport calitate-preț",
     reviews: 996,
     specs: {
     Driver: "40 mm",
-    Battery: "44 hours",
-    Microphone: "AI Noise Cancelling",
-    Connection: "2.4 GHz + Bluetooth",
-    NoiseCancelling: "Active Noise Cancellation"
+    Baterie: "44 ore",
+    Microfon: "Anulare zgomot cu AI",
+    Conexiune: "2.4 GHz + Bluetooth",
+    AnulareZgomot: "Anulare activă a zgomotului"
     },
     pros: [
-    "Excellent sound quality",
-    "Active Noise Cancellation",
-    "Dual battery system for uninterrupted gaming"
+    "Calitate excelentă a sunetului",
+    "Anulare activă a zgomotului",
+    "Sistem dublu de baterii pentru sesiuni de gaming neîntrerupte"
 ],
 
 cons: [
-    "High price",
-    "Slightly heavier than competitors",
-    "Microphone isn't detachable"
+    "Preț ridicat",
+    "Puțin mai grele decât concurența",
+    "Microfonul nu este detașabil"
 ],
     },
     {
@@ -114,33 +114,33 @@ cons: [
     name: "Apple iPhone 17",
     brand: "Apple",
     featured: true,
-    tagline: "Powerful. Beautiful. Built for the future. Discover Apple's newest flagship.",
+    tagline: "Puternic. Elegant. Construit pentru viitor. Descoperă cel mai nou flagship Apple.",
      oldPrice: 4999.99,
     currency: "RON",
     price: 4598.99,
     rating: 4.8,
     category: "Phones",
-    description: "6.3-inch Super Retina XDR display with ProMotion, A19 chip, 48MP dual-camera system, and all-day battery life.",
+    description: "Display Super Retina XDR de 6.3 inch cu ProMotion, chip A19, sistem foto dual de 48MP și autonomie pentru o zi întreagă.",
     affiliateLink: "#",
     image: "images/iphoe17.jpeg",
-    badge: "New",
+    badge: "Nou",
     reviews: 1304,
     specs: {
-    Display: "6.3-inch OLED",
+    Display: "OLED de 6.3 inch",
     Chip: "Apple A19",
-    Storage: "128GB",
-    Camera: "48MP",
-    Battery: "Up to 28 hours video playback"
+    Stocare: "128GB",
+    Cameră: "48MP",
+    Baterie: "Până la 28 de ore redare video"
     },
     pros: [
-    "Powerful A19 chip",
-    "Excellent camera system",
-    "Beautiful OLED display"
+    "Chip A19 puternic",
+    "Sistem foto excelent",
+    "Display OLED superb"
 ],
 
 cons: [
-    "No charger included",
-    "Higher price than many competitors"
+    "Nu include încărcător",
+    "Preț mai mare decât mulți competitori"
 ]
 },
     {
@@ -152,56 +152,56 @@ cons: [
     price: 5032.99,
     rating: 4.7,
     category: "Gaming",
-    description: "27-inch QHD OLED gaming monitor with a 240Hz refresh rate built for competitive play.",
+    description: "Monitor gaming OLED QHD de 27 inch, cu rată de refresh de 240Hz, construit pentru jocul competitiv.",
     affiliateLink: "#",
     image: "images/asusmonitor.jpg",
-    badge: "Top Rated",
+    badge: "Cel mai bine cotat",
     reviews: 412,
     specs: {
-        Display: "27-inch QHD OLED",
-        RefreshRate: "240Hz",
-        ResponseTime: "0.03ms",
-        Ports: "DisplayPort 1.4, HDMI 2.1"
+        Display: "QHD OLED de 27 inch",
+        RataDeRefresh: "240Hz",
+        TimpDeRăspuns: "0.03ms",
+        Porturi: "DisplayPort 1.4, HDMI 2.1"
     },
     pros: [
-        "Stunning OLED color and contrast",
-        "Ultra-fast 240Hz refresh rate",
-        "Near-instant response time"
+        "Culori și contrast OLED impresionante",
+        "Rată de refresh ultra-rapidă de 240Hz",
+        "Timp de răspuns aproape instantaneu"
     ],
     cons: [
-        "Risk of OLED burn-in with static images",
-        "Expensive compared to LCD alternatives"
+        "Risc de burn-in OLED la imagini statice",
+        "Scump comparativ cu alternativele LCD"
     ]
 },
     {
     id: 6,
     name: "Samsung Galaxy S25 Ultra",
     brand: "Samsung",
-    oldPrice: 4800.00,
+    oldPrice: 4800.99,
     currency: "RON",
     price: 4499.99,
     rating: 4.7,
     category: "Phones",
-    description: "6.9-inch Dynamic AMOLED display, Snapdragon 8 Elite chip, and a 200MP camera system with built-in S Pen.",
+    description: "Display Dynamic AMOLED de 6.9 inch, chip Snapdragon 8 Elite și sistem foto de 200MP cu S Pen inclus.",
     affiliateLink: "#",
     image: "images/galaxys25.jpg",
-    badge: "Best Seller",
+    badge: "Cel mai vândut",
     reviews: 2107,
     specs: {
-        Display: "6.9-inch AMOLED",
+        Display: "AMOLED de 6.9 inch",
         Chip: "Snapdragon 8 Elite",
-        Storage: "256GB",
-        Camera: "200MP",
-        Battery: "5000mAh"
+        Stocare: "256GB",
+        Cameră: "200MP",
+        Baterie: "5000mAh"
     },
     pros: [
-        "Excellent 200MP camera system",
-        "Built-in S Pen",
-        "Bright, sharp AMOLED display"
+        "Sistem foto excelent de 200MP",
+        "S Pen inclus",
+        "Display AMOLED luminos și clar"
     ],
     cons: [
-        "Large size isn't for everyone",
-        "Premium price"
+        "Dimensiunea mare nu e pentru oricine",
+        "Preț premium"
     ]
 },
     {
@@ -212,26 +212,26 @@ cons: [
     price: 5999.99,
     rating: 4.8,
     category: "Laptops",
-    description: "15-inch Liquid Retina display, Apple M4 chip, and all-day battery life in a fanless design.",
+    description: "Display Liquid Retina de 15 inch, chip Apple M4 și autonomie pentru o zi întreagă, într-un design fără ventilator.",
     affiliateLink: "#",
     image: "images/macbookair15.jpg",
-    badge: "Editor's Choice",
+    badge: "Alegerea Editorilor",
     reviews: 876,
     specs: {
-        Display: "15.3-inch Liquid Retina",
+        Display: "Liquid Retina de 15.3 inch",
         Chip: "Apple M4",
         RAM: "16GB",
-        Storage: "512GB SSD",
-        Battery: "Up to 18 hours"
+        Stocare: "512GB SSD",
+        Baterie: "Până la 18 ore"
     },
     pros: [
-        "Silent, fanless design",
-        "Excellent battery life",
-        "Lightweight for a 15-inch laptop"
+        "Design silențios, fără ventilator",
+        "Autonomie excelentă a bateriei",
+        "Ușor pentru un laptop de 15 inch"
     ],
     cons: [
-        "Limited port selection",
-        "Not upgradeable after purchase"
+        "Selecție limitată de porturi",
+        "Nu poate fi upgradat după achiziție"
     ]
 },
     {
@@ -243,26 +243,26 @@ cons: [
     price: 13799.99,
     rating: 4.6,
     category: "Laptops",
-    description: "16-inch OLED gaming laptop with an RTX 5070 GPU in a slim, premium aluminum chassis.",
+    description: "Laptop gaming OLED de 16 inch, cu placă video RTX 5070, într-un șasiu subțire din aluminiu premium.",
     affiliateLink: "#",
     image: "images/zephyrusg16.jpg",
-    badge: "Best Value",
+    badge: "Cel mai bun raport calitate-preț",
     reviews: 341,
     specs: {
-        Display: "16-inch OLED 240Hz",
+        Display: "OLED de 16 inch, 240Hz",
         GPU: "RTX 5070",
         RAM: "32GB",
-        Storage: "1TB SSD",
-        Weight: "1.85 kg"
+        Stocare: "1TB SSD",
+        Greutate: "1.85 kg"
     },
     pros: [
-        "Powerful RTX 5070 graphics",
-        "Vivid 240Hz OLED display",
-        "Surprisingly slim for a gaming laptop"
+        "Grafică RTX 5070 puternică",
+        "Display OLED viu, 240Hz",
+        "Surprinzător de subțire pentru un laptop gaming"
     ],
     cons: [
-        "Fans can get loud under load",
-        "Premium price for the specs"
+        "Ventilatoarele pot fi zgomotoase sub sarcină",
+        "Preț premium pentru specificațiile oferite"
     ]
 },
     {
@@ -274,26 +274,26 @@ cons: [
     price: 1299.99,
     rating: 4.8,
     category: "Audio",
-    description: "Industry-leading wireless noise-cancelling headphones with 30-hour battery life and premium sound.",
+    description: "Căști wireless cu anulare a zgomotului lider în industrie, autonomie de 30 de ore și sunet premium.",
     affiliateLink: "#",
     image: "images/sonyxm5.jpg",
-    badge: "Best Seller",
+    badge: "Cel mai vândut",
     reviews: 3298,
     specs: {
         Driver: "30 mm",
-        Battery: "30 hours",
-        NoiseCancelling: "Adaptive ANC",
-        Connection: "Bluetooth 5.2",
-        Weight: "250g"
+        Baterie: "30 ore",
+        AnulareZgomot: "ANC adaptiv",
+        Conexiune: "Bluetooth 5.2",
+        Greutate: "250g"
     },
     pros: [
-        "Best-in-class noise cancellation",
-        "Excellent sound quality",
-        "Comfortable for long listening sessions"
+        "Anulare a zgomotului de top",
+        "Calitate excelentă a sunetului",
+        "Confortabile pentru sesiuni lungi de ascultare"
     ],
     cons: [
-        "Doesn't fold as compactly as prior models",
-        "Touch controls can be finicky"
+        "Nu se pliază la fel de compact ca modelele anterioare",
+        "Comenzile tactile pot fi capricioase"
     ]
 },
     {
@@ -304,25 +304,25 @@ cons: [
     price: 1249.99,
     rating: 4.7,
     category: "Audio",
-    description: "Next-generation active noise cancellation with a smaller, more comfortable fit and adaptive audio.",
+    description: "Anulare activă a zgomotului de nouă generație, cu o formă mai mică, mai confortabilă și audio adaptiv.",
     affiliateLink: "#",
     image: "images/airpodspro3.jpg",
-    badge: "New",
+    badge: "Nou",
     reviews: 1542,
     specs: {
-        Battery: "Up to 8 hours (ANC on)",
-        NoiseCancelling: "Adaptive ANC",
-        Connection: "Bluetooth 5.3",
-        WaterResistance: "IP57"
+        Baterie: "Până la 8 ore (cu ANC activ)",
+        AnulareZgomot: "ANC adaptiv",
+        Conexiune: "Bluetooth 5.3",
+        RezistențăLaApă: "IP57"
     },
     pros: [
-        "Improved noise cancellation over prior gen",
-        "Compact, comfortable fit",
-        "Seamless integration with Apple devices"
+        "Anulare a zgomotului îmbunătățită față de generația anterioară",
+        "Formă compactă și confortabilă",
+        "Integrare perfectă cu dispozitivele Apple"
     ],
     cons: [
-        "Case doesn't support wired charging",
-        "Best features limited to Apple ecosystem"
+        "Carcasa nu suportă încărcare prin cablu",
+        "Cele mai bune funcții sunt limitate la ecosistemul Apple"
     ]
 }
 

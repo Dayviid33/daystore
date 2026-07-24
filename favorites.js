@@ -10,7 +10,7 @@ const favoriteProducts = products.filter(product =>
 
 const title = document.querySelector(".products h2");
 
-title.textContent = `Your Favorites (${favoriteProducts.length})`;
+title.textContent = `Produsele Tale Favorite (${favoriteProducts.length})`;
 
 // If there are no favorites
 if (favoriteProducts.length === 0) {
@@ -18,14 +18,14 @@ if (favoriteProducts.length === 0) {
    favoritesGrid.innerHTML = `
 <div class="empty-state">
 
-    <h2>No favorites yet</h2>
+    <h2>Niciun favorit încă</h2>
 
     <p>
-        Save products you love and they'll appear here.
+        Salvează produsele care îți plac și vor apărea aici.
     </p>
 
     <a href="index.html" class="view-btn">
-        Browse Products
+        Explorează Produse
     </a>
 
 </div>
@@ -41,28 +41,28 @@ if (favoriteProducts.length === 0) {
 
         const discountBadge = product.oldPrice
             ? `<span class="discount-badge">
-                Save ${Math.round(
+                Economisești ${Math.round(
                     ((product.oldPrice - product.price) / product.oldPrice) * 100
                 )}%
             </span>`
             : "";
 
         favoritesGrid.innerHTML += `
-            <div class="product-card">
+            <div class="product-card" data-id="${product.id}">
 
-                <button class="favorite-btn remove-btn" data-id="${product.id}" title="Remove from favorites">
-                    ❤️
+                <button class="favorite-btn remove-btn" data-id="${product.id}" title="Elimină din favorite">
+                    ${ICONS.heartFilled}
                 </button>
 
                 <div class="product-image">
                     <img src="${product.image}" alt="${product.name}" onerror="this.onerror=null;this.src='images/placeholder.svg';">
                 </div>
 
-                <p class="rating">⭐ ${product.rating}</p>
+                <p class="rating">${ICONS.star} ${product.rating}</p>
 
                 <h3>${product.name}</h3>
 
-                <p class="brand">by ${product.brand}</p>
+                <p class="brand">de ${product.brand}</p>
 
                 <div class="price-box">
                     ${oldPrice}
@@ -71,7 +71,7 @@ if (favoriteProducts.length === 0) {
                 </div>
 
                 <a href="product.html?id=${product.id}" class="view-btn">
-                    View Deal
+                    Vezi oferta
                 </a>
 
             </div>
@@ -81,7 +81,10 @@ if (favoriteProducts.length === 0) {
 
     document.querySelectorAll(".remove-btn").forEach(button => {
 
-    button.addEventListener("click", function () {
+    button.addEventListener("click", function (event) {
+
+        // Stop this click from also triggering the card's own click-to-navigate handler below
+        event.stopPropagation();
 
         const id = Number(button.dataset.id);
 
@@ -94,5 +97,18 @@ if (favoriteProducts.length === 0) {
     });
 
 });
+
+    // Make the whole card clickable (not just the "Vezi oferta" button),
+    // since the remove button above already stops its own click from bubbling here.
+    document.querySelectorAll(".product-card").forEach(card => {
+
+        card.addEventListener("click", function () {
+
+            const id = card.dataset.id;
+            window.location.href = `product.html?id=${id}`;
+
+        });
+
+    });
 
 }

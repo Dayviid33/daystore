@@ -7,7 +7,7 @@ if (themeToggle) {
 
     if (savedTheme === "dark") {
         body.classList.add("dark-mode");
-        themeToggle.textContent = "☀️";
+        themeToggle.innerHTML = ICONS.sun;
     }
 
     themeToggle.addEventListener("click", function () {
@@ -16,10 +16,10 @@ if (themeToggle) {
 
         if (body.classList.contains("dark-mode")) {
             localStorage.setItem("theme", "dark");
-            themeToggle.textContent = "☀️";
+            themeToggle.innerHTML = ICONS.sun;
         } else {
             localStorage.setItem("theme", "light");
-            themeToggle.textContent = "🌙";
+            themeToggle.innerHTML = ICONS.moon;
         }
 
     });

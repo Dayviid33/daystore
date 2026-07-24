@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +7,8 @@
     <link rel="icon" href="images/favicon.ico" sizes="any">
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <title>Favorites - DayStore</title>
-    <meta name="description" content="Your saved products on DayStore - keep track of the tech you love and come back to them anytime.">
+    <title>Favorite - DayStore</title>
+    <meta name="description" content="Produsele tale salvate pe DayStore - ține evidența tehnologiei preferate și revino oricând la ea.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -20,31 +20,32 @@
         <nav class="navbar">
             <h1 class="logo"> DayStore</h1>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="favorites.html">Favorites</a></li>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="favorites.html">Favorite</a></li>
             </ul>
             <button id="theme-toggle" class="theme-btn">
-                🌙
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
             </button>
         </nav>
     </header>
 
     <div class="disclosure-banner">
-        DayStore may earn a commission from purchases made through links on this site, at no extra cost to you. <a href="disclosure.html">Learn more</a>
+        DayStore poate câștiga un comision din achizițiile realizate prin linkurile de pe acest site, fără costuri suplimentare pentru tine. <a href="disclosure.html">Află mai multe</a>
     </div>
 
     <main>
         <section class="products">
-            <h2>Your <span>Favorites</span></h2>
+            <h2>Produsele Tale <span>Favorite</span></h2>
             
             <p class="favorites-subtitle">
-                The products you've saved for later.
+                Produsele pe care le-ai salvat pentru mai târziu.
             </p>
             <div class="product-grid" id="favorites-grid">
 
             </div>
         </section>
     </main>
+    <script src="icons.js"></script>
     <script src="products.js"></script>
     <script src="favorites.js"></script>
     <script src="theme.js"></script>
