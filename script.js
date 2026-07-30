@@ -83,7 +83,7 @@ function displayProducts(productList) {
 </div>
 
                 <a href="product.html?id=${product.id}" class="view-btn">
-                Vezi detalii
+                Vezi pe eMAG
                 </a>
 
             </div>

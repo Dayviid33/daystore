@@ -16,33 +16,35 @@ function formatPrice(amount, currency) {
 const products = [
   {
     id:1,
-    name:"Logitech G Pro X Superlight 2",
-    brand: "Logitech",
-    oldPrice: 650.00,
+    name:"Set 5 Tricouri Negre Simple Barbati, Model Elegant, 100% bumbac",
+    brand: "Gildan",
+    oldPrice: 94.05,
     currency: "RON",
-    price: 609.99,
-    rating: "4.8",
-    category: "Gaming",
-    description: "Mouse gaming premium, realizat cu precizie de Logitech",
-    affiliateLink: "#",
-    image: "images/mouselogitech.jpg",
+    price: 79.86,
+    rating: 4.32,
+    category: "Imbracaminte",
+    description: "Acest set conține 5 tricouri Gildan pentru bărbați, realizate din 100% bumbac, oferind confort și respirabilitate pe tot parcursul anului. Croiala tubulară fără cusături laterale asigură o potrivire plăcută, iar cusăturile duble din zona gâtului și a umerilor cresc rezistența în timp. Datorită designului simplu și elegant, tricourile sunt potrivite atât pentru ținute casual și sport, cât și pentru un stil de zi cu zi.",
+    affiliateLink: "https://l.profitshare.ro/l/16251086",
+    image: "images/tricouri.avif",
     badge: "Cel mai vândut",
-    reviews: 1243,
+    reviews: 203,
     specs:{
-        Greutate:"60g",
-        Baterie:"95 ore",
-        Senzor:"HERO 2",
-        DPI:"32000"
+       Culoare: "Negru",
+       Imprimeu: "Uni",
+       Material: "bumbac",
+       Croiala: "Lejer",
+       Guler: "La baza gatului",
+       Lungime: "Maneca scurta",
     },
     pros: [
-        "Ultra-ușor (60g)",
-        "Senzor HERO 2 excelent",
-        "Autonomie baterie de 95 de ore"
+       "Fabricate din 100% bumbac, confortabile și respirabile",
+       "Pachet de 5 tricouri, raport calitate-preț foarte bun",
+       "Design simplu și ușor de asortat cu orice ținută",
     ],
 
     cons: [
-        "Preț premium",
-        "Fără conectivitate Bluetooth"
+        "Fără imprimeuri sau modele, aspect foarte simplu",
+        "Pot necesita călcare după spălare",
     ]
 },
     {

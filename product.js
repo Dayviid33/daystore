@@ -97,7 +97,7 @@ productContainer.innerHTML = `
 
             <p>${product.description}</p>
 
-            <h3>Specificații</h3>
+            <h3>Detalii Produs:</h3>
             <div class="specs">
                 ${specsHTML}
             </div>
