@@ -1,93 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    IMPORTANT: Replace "https://your-username.github.io/daystore" below
-    with your actual live site URL (GitHub Pages URL or custom domain)
-    before submitting this to Google Search Console.
--->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-    <url>
-        <loc>https://dayviid33.github.io/DayStore/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
+  <url>
+    <loc>https://dayviid33.github.io/daystore/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
 
-    <url>
-        <loc>https://dayviid33.github.io/DayStore/</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.3</priority>
-    </url>
+  <url>
+    <loc>https://dayviid33.github.io/daystore/favorites.html</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
-    <url>
-        <loc>https://dayviid33.github.io/DayStore/</loc>
-        <changefreq>yearly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://dayviid33.github.io/DayStore/</loc>
-        <changefreq>yearly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://dayviid33.github.io/DayStore/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://dayviid33.github.io/DayStore/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://dayviid33.github.io/DayStore/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://dayviid33.github.io/DayStore/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://dayviid33.github.io/DayStore/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://dayviid33.github.io/DayStore/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://dayviid33.github.io/DayStore/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://dayviid33.github.io/DayStore/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://dayviid33.github.io/DayStore/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://dayviid33.github.io/DayStore/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
+  <url>
+    <loc>https://dayviid33.github.io/daystore/product.html</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
 </urlset>
