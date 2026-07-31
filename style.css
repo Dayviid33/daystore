@@ -1048,3 +1048,20 @@ body.dark-mode .category-pill{
 .view-btn:active{
     transform:scale(.98);
 }
+
+.about-section {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.about-section h2 {
+    margin-bottom: 16px;
+}
+
+.about-section p {
+    margin-bottom: 12px;
+    line-height: 1.6;
+    color: var(--text-secondary, #555);
+}
