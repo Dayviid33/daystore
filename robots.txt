@@ -2,5 +2,4 @@
 User-agent: *
 Allow: /
 
-# IMPORTANT: Replace with your actual live site URL before going live
-Sitemap: https://dayviid33.github.io/DayStore/
+Sitemap: https://dayviid33.github.io/daystore/sitemap.xml
